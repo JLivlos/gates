@@ -83,6 +83,10 @@ gatesBlock.addEventListener('click', (e) => {
 
 
 //CONTACTS, SOCIAL MEDIA
+document.querySelector('.header__logo').addEventListener('click', () => {    
+   window.scrollTo(0, 0);    
+});
+
 document.querySelector('.contacts__phone'). addEventListener('click', () => {
     window.open('tel:+375295997769', '_self');
 });
