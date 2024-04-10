@@ -151,7 +151,9 @@ html {
   line-height: 35px;
   color: #636060;
 }
-
+.welcome__text__list {
+  margin: 0;
+}
 .welcome__img {
   width: 450px;
   height: 390px;
@@ -671,6 +673,7 @@ html {
   }
   .gates__title {
     font-size: 35px;
+    width: 200px;
   }
 
   .gates__wrapper {
@@ -907,6 +910,7 @@ html {
   .gates__title {
     margin-bottom: 20px;
     text-align: center;
+    width: unset;
   }
   .gates__right {
     align-items: center;
