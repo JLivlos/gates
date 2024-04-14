@@ -39,6 +39,11 @@ html {
   background: #edf2ec;
   position: fixed;
   z-index: 11;
+  box-shadow: none;
+}
+
+.header_scrolled {
+  box-shadow: 0 2px 2px #7171711c;
 }
 
 .header__logo {
@@ -80,6 +85,7 @@ html {
   list-style: none;
   display: flex;
   gap: 44px;
+  margin: 0;
 }
 
 .header__menu__ul__li {
@@ -113,8 +119,43 @@ html {
   align-items: center;
 }
 
+.header__menu-phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 84px;
+}
+
+.header__phone {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.header__phone__icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("assets/phone-header.png");
+  background-size: 20px 20px;
+}
+
+.header__phone__text {
+  text-decoration: none;
+  color: #499a18;
+}
+
+.header__phone__icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 .welcome {
-  padding-top: 84px;
+  padding-top: 100px;
   background: #edf2ec;
 }
 
@@ -176,7 +217,8 @@ html {
   justify-content: space-between;
 }
 
-.gates__title {
+.gates__title,
+.gallery__title {
   margin-bottom: 50px;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -314,8 +356,73 @@ html {
   color: #717171;
 }
 
-.repair {
+.gallery {
+  padding-top: 50px;
   background: #edf2ec;
+}
+
+.gallery__slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gallery__items__visible {
+  width: 1095px;
+  height: fit-content;
+  overflow: hidden;
+  margin-bottom: 60px;
+  border-radius: 10px;
+}
+
+.gallery__slider__left,
+.gallery__slider__right {
+  color: #499a18;
+  font-size: 70px;
+  cursor: pointer;
+  opacity: 0.5;
+  margin-top: -55px;
+}
+
+.gallery__slider__left:hover,
+.gallery__slider__right:hover {
+  opacity: 0.8;
+}
+
+.gallery__items {
+  width: 3285px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+
+.gallery__items1,
+.gallery__items2,
+.gallery__items3 {
+  width: 1095px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery__item {
+  padding: 0 4px 4px 4px;
+}
+
+.gallery__first-row {
+  width: 350px;
+  height: 233px;
+}
+
+.gallery__second-row {
+  width: 260px;
+  height: 173px;
+}
+
+.gallery__item img {
+  border-radius: 10px;
 }
 
 .repair__wrapper {
@@ -360,7 +467,7 @@ html {
 }
 
 .contacts {
-  background: #ffffff;
+  background: #edf2ec;
 }
 
 .contacts__title {
@@ -473,6 +580,7 @@ html {
 .footer {
   height: 90px;
   background: #edf2ec;
+  box-shadow: 0 -2px 2px #7171711c;
 }
 
 .footer__wrapper {
@@ -550,20 +658,40 @@ html {
     height: 416px;
     background-size: 400px 416px;
   }
+  .gallery__items {
+    width: 2970px;
+  }
+  .gallery__items__visible,
+  .gallery__items1,
+  .gallery__items2,
+  .gallery__items3 {
+    width: 990px;
+  }
+  .gallery__first-row {
+    width: 320px;
+    height: 213px;
+  }
+  .gallery__second-row {
+    width: 238px;
+    height: 158px;
+  }
 }
 
 @media screen and (max-width: 1150px) {
   .container {
     width: 1000px;
   }
+  .welcome {
+    padding-top: 100px;
+  }
   .welcome__wrapper {
-    gap: 210px;
+    gap: 90px;
   }
   .welcome__img {
     width: 350px;
-    height: 351px;
-    background-image: url(assets/welcome_img3.png);
-    background-size: 350px 351px;
+    height: 436px;
+    background-image: url(assets/welcome_img4.png);
+    background-size: 350px 436px;
   }
   .gates__variants {
     width: 600px;
@@ -581,6 +709,23 @@ html {
   .gates__right__img {
     width: 350px;
     height: 350px;
+  }
+  .gallery__items {
+    width: 2460px;
+  }
+  .gallery__items__visible,
+  .gallery__items1,
+  .gallery__items2,
+  .gallery__items3 {
+    width: 820px;
+  }
+  .gallery__first-row {
+    width: 265px;
+    height: 176px;
+  }
+  .gallery__second-row {
+    width: 197px;
+    height: 131px;
   }
   .repair__wrapper {
     gap: 40px;
@@ -617,6 +762,11 @@ html {
   .container {
     width: 900px;
   }
+  .welcome__img {
+    width: 300px;
+    height: 374px;
+    background-size: 300px 374px;
+  }
   .gates__right__img {
     width: 300px;
     height: 300px;
@@ -625,11 +775,63 @@ html {
     width: 300px;
     height: 300px;
   }
+  .header__menu__ul__li a:hover {
+    color: #010201;
+  }
+  .header__phone__icon:hover {
+    transform: none;
+  }
+  .gallery__slider__left:hover,
+  .gallery__slider__right:hover {
+    opacity: 0.5;
+  }
+  .contacts__item:hover .phone__text,
+  .contacts__item:hover .mail__text,
+  .contacts__item:hover .address__text,
+  .contacts__item:hover .telegram__title,
+  .contacts__item:hover .viber__title,
+  .contacts__item:hover .whatsapp__title {
+    color: #010201;
+  }
+  .contacts__item:hover .phone__icon,
+  .contacts__item:hover .mail__icon,
+  .contacts__item:hover .address__icon,
+  .contacts__item:hover .telegram__icon,
+  .contacts__item:hover .viber__icon,
+  .contacts__item:hover .whatsapp__icon {
+    transform: none;
+  }
 }
 
 @media screen and (max-width: 930px) {
   .container {
     width: 830px;
+  }
+  .gallery__items {
+    width: 2280px;
+  }
+  .gallery__items__visible,
+  .gallery__items1,
+  .gallery__items2,
+  .gallery__items3 {
+    width: 760px;
+  }
+  .gallery__first-row {
+    width: 243px;
+    height: 162px;
+  }
+  .gallery__second-row {
+    width: 180px;
+    height: 120px;
+  }
+  .welcome {
+    padding-top: 60px;
+  }
+  .welcome__img {
+    margin-top: 40px;
+    width: 270px;
+    height: 337px;
+    background-size: 270px 337px;
   }
   .gates__variants {
     width: 510px;
@@ -655,7 +857,7 @@ html {
     width: 668px;
   }
   .header__menu__ul {
-    gap: 47px;
+    gap: 18px;
   }
   .welcome__wrapper {
     flex-direction: row-reverse;
@@ -684,7 +886,6 @@ html {
     font-size: 35px;
     width: 200px;
   }
-
   .gates__wrapper {
     flex-direction: row-reverse;
   }
@@ -705,6 +906,30 @@ html {
   .gates__right__img {
     width: 200px;
     height: 200px;
+  }
+  .gallery__title {
+    font-size: 35px;
+  }
+  .gallery__items {
+    width: 1775px;
+  }
+  .gallery__items__visible,
+  .gallery__items1,
+  .gallery__items2,
+  .gallery__items3 {
+    width: 585px;
+  }
+  .gallery__first-row {
+    width: 283px;
+    height: 188px;
+  }
+  .gallery__second-row {
+    width: 186px;
+    height: 124px;
+  }
+  .fourth-item {
+    width: 283px;
+    height: 188px;
   }
   .repair__title {
     width: 668px;
@@ -747,7 +972,13 @@ html {
     width: 600px;
   }
   .header__menu__ul {
-    gap: 30px;
+    gap: 15px;
+  }
+  .header__menu__ul__li {
+    font-size: 14px;
+  }
+  .header__phone__text {
+    font-size: 20px;
   }
   .welcome__wrapper {
     gap: 0;
@@ -768,6 +999,27 @@ html {
   .gates__variants__item__info__text {
     width: 300px;
   }
+  .gallery__items {
+    width: 1575px;
+  }
+  .gallery__items__visible,
+  .gallery__items1,
+  .gallery__items2,
+  .gallery__items3 {
+    width: 525px;
+  }
+  .gallery__first-row {
+    width: 253px;
+    height: 168px;
+  }
+  .gallery__second-row {
+    width: 166px;
+    height: 110px;
+  }
+  .fourth-item {
+    width: 253px;
+    height: 168px;
+  }
   .repair__title,
   .repair__info,
   .repair__text {
@@ -779,25 +1031,35 @@ html {
   .container {
     width: 540px;
   }
-  .header {
-    height: 50px;
+  .header,
+  .header__container {
+    height: 55px;
+  }
+  .header__phone {
+    margin-top: 0;
+  }
+  .header__menu-phone {
+    flex-direction: row;
+    align-items: center;
   }
   .burger {
     display: block;
     transition: 200ms;
     position: relative;
-    margin-left: 109px;
+    margin-left: 120px;
   }
   .burger_close {
     z-index: 11;
     background: url("assets/close.svg") no-repeat;
     background-size: 28px 27px;
     transition: 200ms;
+    margin-left: 135px;
   }
   .header__menu {
     width: 150px;
   }
   .header__menu__ul {
+    margin-top: 14px;
     position: absolute;
     z-index: 11;
     padding: 5px;
@@ -807,23 +1069,17 @@ html {
     gap: 0;
     overflow: hidden;
     border-radius: 10px;
-    transition: 700ms;
+    /*transition: 700ms;*/
   }
   .header__menu__ul_active {
     background-color: #edf2ec;
     border: 1px solid #499a18;
     height: auto;
-    transition: 700ms;
+    /*transition: 700ms;*/
   }
   .header__menu__ul__li {
     width: 150px;
     text-align: center;
-  }
-  .header__menu__ul__li:hover {
-    background-color: white;
-  }
-  .header__menu__ul__li_active:hover {
-    background-color: transparent;
   }
   .welcome__info {
     width: 370px;
@@ -844,6 +1100,27 @@ html {
   .gates__variants__item__info__text {
     width: 260px;
   }
+  .gallery__items {
+    width: 1395px;
+  }
+  .gallery__items__visible,
+  .gallery__items1,
+  .gallery__items2,
+  .gallery__items3 {
+    width: 465px;
+  }
+  .gallery__first-row {
+    width: 222px;
+    height: 148px;
+  }
+  .gallery__second-row {
+    width: 146px;
+    height: 97px;
+  }
+  .fourth-item {
+    width: 222px;
+    height: 148px;
+  }
   .repair__info,
   .repair__text,
   .repair__title {
@@ -855,6 +1132,30 @@ html {
   .container {
     width: 510px;
   }
+  .header__logo__title {
+    display: none;
+  }
+  .gallery__items {
+    width: 1395px;
+  }
+  .gallery__items__visible,
+  .gallery__items1,
+  .gallery__items2,
+  .gallery__items3 {
+    width: 465px;
+  }
+  .gallery__first-row {
+    width: 222px;
+    height: 148px;
+  }
+  .gallery__second-row {
+    width: 146px;
+    height: 97px;
+  }
+  .fourth-item {
+    width: 222px;
+    height: 148px;
+  }
   .welcome__img {
     width: 118px;
     height: 250px;
@@ -863,6 +1164,9 @@ html {
   }
   .welcome__info {
     width: 385px;
+  }
+  .gates {
+    padding: 30px 0 50px 0;
   }
   .gates__variants {
     width: 300px;
@@ -875,6 +1179,27 @@ html {
   .gates__variants__item__info__line,
   .gates__variants__item__info__text {
     width: 260px;
+  }
+  .gallery__items {
+    width: 1326px;
+  }
+  .gallery__items__visible,
+  .gallery__items1,
+  .gallery__items2,
+  .gallery__items3 {
+    width: 442px;
+  }
+  .gallery__first-row {
+    width: 212px;
+    height: 141px;
+  }
+  .gallery__second-row {
+    width: 138px;
+    height: 92px;
+  }
+  .fourth-item {
+    width: 212px;
+    height: 141px;
   }
   .repair__title,
   .repair__info,
@@ -898,7 +1223,8 @@ html {
   .welcome__info {
     width: 450px;
   }
-  .welcome__title {
+  .welcome__title,
+  .gallery__title {
     text-align: center;
   }
   .welcome__text {
@@ -939,6 +1265,23 @@ html {
   .gates__variants__item__info__text {
     width: 390px;
   }
+  .gallery__items {
+    width: 1326px;
+  }
+  .gallery__items__visible {
+    width: 380px;
+  }
+  .gallery__items1,
+  .gallery__items2,
+  .gallery__items3 {
+    width: fit-content;
+    flex-wrap: nowrap;
+  }
+  .gallery__first-row,
+  .gallery__second-row {
+    width: 372px;
+    height: 248px;
+  }
   .repair__info,
   .repair__title,
   .repair__text {
@@ -968,7 +1311,9 @@ html {
   .container {
     width: 400px;
   }
-
+  .header__phone {
+    margin-right: -38px;
+  }
   .welcome__img {
     width: 400px;
     height: 101px;
@@ -992,6 +1337,14 @@ html {
   .gates__variants__item__info__text {
     width: 370px;
   }
+  .gallery__items__visible {
+    width: 330px;
+  }
+  .gallery__first-row,
+  .gallery__second-row {
+    width: 322px;
+    height: 214px;
+  }
   .repair__title {
     font-size: 36px;
   }
@@ -1005,6 +1358,9 @@ html {
 @media screen and (max-width: 435px) {
   .container {
     width: 350px;
+  }
+  .header__phone {
+    margin-right: -58px;
   }
   .welcome__img {
     width: 350px;
@@ -1035,6 +1391,14 @@ html {
   .gates__variants__item__info__line,
   .gates__variants__item__info__text {
     width: 270px;
+  }
+  .gallery__items__visible {
+    width: 280px;
+  }
+  .gallery__first-row,
+  .gallery__second-row {
+    width: 272px;
+    height: 181px;
   }
   .repair__title {
     font-size: 28px;
@@ -1070,12 +1434,15 @@ html {
     width: 255px;
   }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 375px) {
   .container {
     width: 340px;
   }
+  .header__phone {
+    margin-right: -62px;
+  }
   .burger {
-    margin-left: 95px;
+    margin-left: 111px;
   }
   .header__menu__ul {
     right: 0;
@@ -1104,5 +1471,13 @@ html {
   .gates__variants__item__info__line,
   .gates__variants__item__info__text {
     width: 260px;
+  }
+  .gallery__items__visible {
+    width: 275px;
+  }
+  .gallery__first-row,
+  .gallery__second-row {
+    width: 267px;
+    height: 178px;
   }
 }
