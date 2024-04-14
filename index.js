@@ -1,3 +1,11 @@
+window.addEventListener("scroll", function (e) {
+    if (window.pageYOffset != 0) {
+        document.querySelector('.header').classList.add('header_scrolled');
+    } else {
+        document.querySelector('.header').classList.remove('header_scrolled');
+    };  
+})
+
 //BURGER
 const burgerIcon = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.header__menu__ul');
@@ -83,8 +91,12 @@ gatesBlock.addEventListener('click', (e) => {
 
 
 //CONTACTS, SOCIAL MEDIA
-document.querySelector('.header__logo').addEventListener('click', () => {    
-   window.scrollTo(0, 0);    
+document.querySelector('.header').addEventListener('click', () => {    
+    scrollUp();        
+});
+
+document.querySelector('.header__phone__icon'). addEventListener('click', () => {
+    window.open('tel:+375295997769', '_self');
 });
 
 document.querySelector('.contacts__phone'). addEventListener('click', () => {
@@ -169,3 +181,49 @@ function setDefaultImg() {
     gatesImg.classList.remove('gates__right__img_swing');
     gatesImg.classList.remove('gates__right__img_sliding');
 };
+
+function scrollUp() {
+    document.querySelector('.header').addEventListener('click', (e) => {                
+    if (e.target.classList.contains('header__phone__icon')||
+        e.target.classList.contains('header__phone__text')||
+        e.target.classList.contains('header__menu__ul')||
+        e.target.classList.contains('burger')||
+        e.target.classList.contains('header__menu__link')||
+        burgerMenu.classList.contains('header__menu__ul_active'))
+        {
+            return;
+        }    
+        window.scrollTo(0, 0);    
+     });
+};
+
+//SLIDER
+const prev = document.querySelector('.gallery__slider__left');
+const next = document.querySelector('.gallery__slider__right');
+const items = document.querySelector('.gallery__items');
+const slider = document.querySelector('.gallery__items__visible');
+let counter = 1;
+let offset = 0;
+
+prev.addEventListener('click', () => {
+    if (counter == 1) {
+        counter = window. innerWidth <= 550 ? 21 : 3;        
+        offset = slider.offsetWidth * (counter - 1);                 
+    } else {
+        counter = --counter;  
+        offset = offset - slider.offsetWidth;              
+    }; 
+    items.style.left = `-${offset}px`;
+});
+
+next.addEventListener('click', () => {
+    if (counter == 3 && window. innerWidth > 550 || counter == 21 ) {
+        counter = 1;
+        offset = 0;         
+        items.style.left = `-${offset}`;                    
+    } else {
+        counter = ++counter;
+        offset = offset + slider.offsetWidth;       
+        items.style.left = `-${offset}px`;    
+    };     
+});
