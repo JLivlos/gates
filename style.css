@@ -225,6 +225,7 @@ html {
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
+  text-align: center;
   color: #000000;
 }
 
@@ -884,13 +885,9 @@ html {
   }
   .gates__title {
     font-size: 35px;
-    width: 200px;
   }
   .gates__wrapper {
     flex-direction: row-reverse;
-  }
-  .gates__gates {
-    margin-top: -90px;
   }
   .gates__variants {
     width: 440px;
