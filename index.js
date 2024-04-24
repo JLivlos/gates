@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function (e) {
+window.addEventListener("scroll", function (e) {    
     if (window.pageYOffset != 0) {
         document.querySelector('.header').classList.add('header_scrolled');
     } else {

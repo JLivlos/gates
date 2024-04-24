@@ -1,12 +1,10 @@
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 .body {
   margin: 0;
   overflow-y: auto;
-  height: 100%;
 }
 
 .body_no-scroll {
@@ -208,8 +206,13 @@ html {
   background-size: 450px 463px;
 }
 
+#gates {
+  padding-top: 84px;
+  margin-top: -84px;
+}
+
 .gates {
-  padding: 70px 0 50px 0;
+  padding: 0 0 50px 0;
 }
 
 .gates__wrapper {
@@ -357,8 +360,13 @@ html {
   color: #717171;
 }
 
+#gallery {
+  padding-top: 84px;
+  margin-top: -84px;
+}
+
 .gallery {
-  padding-top: 50px;
+  padding: 20px 0 10px;
   background: #edf2ec;
 }
 
@@ -426,8 +434,16 @@ html {
   border-radius: 10px;
 }
 
+#repair {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
+.repair {
+  padding: 40px 0;
+}
+
 .repair__wrapper {
-  padding: 85px 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -467,12 +483,17 @@ html {
   background-size: cover;
 }
 
+#contacts {
+  padding-top: 84px;
+  margin-top: -84px;
+}
+
 .contacts {
   background: #edf2ec;
+  padding: 40px 0 20px;
 }
 
 .contacts__title {
-  padding-top: 62px;
   width: 195px;
   margin: 0 auto;
   font-family: "Inter", sans-serif;
@@ -484,9 +505,10 @@ html {
 }
 
 .contacts-wrapper {
-  margin-top: 34px;
+  margin: 34px 0 60px;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .contacts__text__wrapper {
@@ -570,12 +592,59 @@ html {
   background-size: 20px 20px;
 }
 
-.contacts__img {
-  margin-top: -103px;
-  width: 270px;
-  height: 415px;
-  background-image: url("assets/contact_woman.png");
-  background-size: 270px 415px;
+.contacts__map {
+  width: 400px;
+  height: 300px;
+  border: solid 1px #499a18;
+}
+
+.payment {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.payment__item {
+  height: 25px;
+}
+
+.belcard {
+  width: 113px;
+  background-image: url("assets/belcard.png");
+  background-size: 113px 25px;
+}
+
+.mir {
+  width: 70px;
+  height: 20px;
+  background-image: url("assets/mir.png");
+  background-size: 70px 20px;
+}
+
+.mastercard {
+  width: 42px;
+  background-image: url("assets/mastercard.png");
+  background-size: 42px 25px;
+}
+
+.visa {
+  width: 39px;
+  background-image: url("assets/visa.png");
+  background-size: 39px 25px;
+}
+
+.cashalot {
+  width: 117px;
+  background-image: url("assets/cashalot.png");
+  background-size: 117px 25px;
+}
+
+.karta-pokupok {
+  width: 53px;
+  background-image: url("assets/karta-pokupok.png");
+  background-size: 53px 25px;
 }
 
 .footer {
@@ -941,15 +1010,10 @@ html {
   .repair__img {
     display: none;
   }
-  .contacts__title {
-    padding-top: 70px;
+  .payment {
+    gap: 25px;
   }
-  .contacts__img {
-    margin-top: -70px;
-    width: 247px;
-    height: 380px;
-    background-size: 247px 380px;
-  }
+
   /*.footer {
     height: 110px;
   }*/
@@ -1022,6 +1086,10 @@ html {
   .repair__text {
     width: 600px;
   }
+  .contacts-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -1086,6 +1154,10 @@ html {
     height: 212px;
     background-size: 170px 212px;
   }
+  #gates {
+    padding-top: 55px;
+    margin-top: -55px;
+  }
   .gates__variants {
     width: 320px;
   }
@@ -1096,6 +1168,10 @@ html {
   .gates__variants__item__info__line,
   .gates__variants__item__info__text {
     width: 260px;
+  }
+  #gallery {
+    padding-top: 55px;
+    margin-top: -55px;
   }
   .gallery__items {
     width: 1395px;
@@ -1122,6 +1198,11 @@ html {
   .repair__text,
   .repair__title {
     width: 540px;
+  }
+  .payment {
+    width: 300px;
+    margin-left: calc(50% - 150px);
+    flex-wrap: wrap;
   }
 }
 
@@ -1162,10 +1243,8 @@ html {
   .welcome__info {
     width: 385px;
   }
-  .gates {
-    padding: 30px 0 50px 0;
-  }
   .gates__variants {
+    padding: 0;
     width: 300px;
     border: none;
   }
@@ -1203,11 +1282,6 @@ html {
   .repair__text {
     width: 500px;
   }
-  .contacts__img {
-    width: 230px;
-    height: 353px;
-    background-size: 230px 353px;
-  }
 }
 
 @media screen and (max-width: 550px) {
@@ -1234,14 +1308,11 @@ html {
     background-size: 450px 114px;
     margin-bottom: 40px;
   }
-  .gates {
-    padding: 30px 0 50px 0;
-  }
   .gates__wrapper {
     flex-direction: column-reverse;
   }
   .gates__title {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: center;
     width: unset;
   }
@@ -1253,6 +1324,7 @@ html {
   }
   .gates__variants {
     width: 430px;
+    padding-top: 40px;
   }
   .gates__variants__item,
   .gates__variants__info {
@@ -1286,13 +1358,6 @@ html {
   }
   .contacts__text__wrapper {
     width: 290px;
-  }
-  .address__text {
-    width: 200px;
-  }
-  .contacts__img {
-    margin-left: -89px;
-    margin-top: -45px;
   }
   .credits__legal {
     width: 300px;
@@ -1345,10 +1410,9 @@ html {
   .repair__title {
     font-size: 36px;
   }
-  .contacts__img {
-    width: 200px;
-    height: 307px;
-    background-size: 200px 307px;
+  .contacts__map {
+    width: 300px;
+    height: 200px;
   }
 }
 
@@ -1407,16 +1471,6 @@ html {
   .contacts__title {
     font-size: 25px;
     text-align: center;
-  }
-  .contacts__img {
-    width: 170px;
-    height: 261px;
-    background-size: 170px 261px;
-    margin-left: -130px;
-    margin-top: 25px;
-  }
-  .address__text {
-    width: 160px;
   }
   .footer__credits {
     gap: 5px;
