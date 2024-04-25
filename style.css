@@ -745,6 +745,9 @@ html {
     width: 238px;
     height: 158px;
   }
+  .repair__wrapper {
+    gap: 0;
+  }
 }
 
 @media screen and (max-width: 1150px) {
@@ -797,9 +800,6 @@ html {
     width: 197px;
     height: 131px;
   }
-  .repair__wrapper {
-    gap: 40px;
-  }
   .repair__img {
     width: 350px;
     height: 350px;
@@ -825,6 +825,9 @@ html {
   .gates__variants__item__info__line,
   .gates__variants__item__info__text {
     width: 480px;
+  }
+  .repair__info {
+    width: 550px;
   }
 }
 
@@ -913,9 +916,6 @@ html {
   .gates__variants__item__info__line,
   .gates__variants__item__info__text {
     width: 440px;
-  }
-  .repair__wrapper {
-    gap: 0;
   }
   .repair__info {
     width: 510px;
