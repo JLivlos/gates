@@ -142,6 +142,11 @@ html {
 }
 
 .header__phone__text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   text-decoration: none;
   color: #499a18;
 }
@@ -647,6 +652,31 @@ html {
   background-size: 53px 25px;
 }
 
+.union {
+  width: 40px;
+  background-image: url("assets/unionpay.png");
+  background-size: 40px 25px;
+}
+
+.apple {
+  width: 48px;
+  height: 20px;
+  background-image: url("assets/applepay.png");
+  background-size: 48px 20px;
+}
+
+.samsung {
+  width: 54px;
+  background-image: url("assets/samsungpay.png");
+  background-size: 54px 25px;
+}
+
+.contactless {
+  width: 42px;
+  background-image: url("assets/contactless.png");
+  background-size: 42px 25px;
+}
+
 .footer {
   height: 90px;
   background: #edf2ec;
@@ -745,6 +775,9 @@ html {
     width: 238px;
     height: 158px;
   }
+  .repair__wrapper {
+    gap: 0;
+  }
 }
 
 @media screen and (max-width: 1150px) {
@@ -797,9 +830,6 @@ html {
     width: 197px;
     height: 131px;
   }
-  .repair__wrapper {
-    gap: 40px;
-  }
   .repair__img {
     width: 350px;
     height: 350px;
@@ -825,6 +855,14 @@ html {
   .gates__variants__item__info__line,
   .gates__variants__item__info__text {
     width: 480px;
+  }
+  .repair__info {
+    width: 550px;
+  }
+  .payment {
+    width: 546px;
+    margin-left: calc(50% - 273px);
+    flex-wrap: wrap;
   }
 }
 
@@ -913,9 +951,6 @@ html {
   .gates__variants__item__info__line,
   .gates__variants__item__info__text {
     width: 440px;
-  }
-  .repair__wrapper {
-    gap: 0;
   }
   .repair__info {
     width: 510px;
@@ -1009,9 +1044,6 @@ html {
   }
   .repair__img {
     display: none;
-  }
-  .payment {
-    gap: 25px;
   }
 
   /*.footer {
@@ -1200,9 +1232,9 @@ html {
     width: 540px;
   }
   .payment {
-    width: 300px;
-    margin-left: calc(50% - 150px);
-    flex-wrap: wrap;
+    width: 540px;
+    margin-left: calc(50% - 270px);
+    gap: 25px;
   }
 }
 
@@ -1281,6 +1313,11 @@ html {
   .repair__info,
   .repair__text {
     width: 500px;
+  }
+  .payment {
+    width: 334px;
+    margin-left: calc(50% - 167px);
+    gap: 30px;
   }
 }
 
