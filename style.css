@@ -646,6 +646,12 @@ html {
   background-size: 117px 25px;
 }
 
+.turtle {
+  width: 39px;
+  background-image: url("assets/turtle.png");
+  background-size: 39px 25px;
+}
+
 .karta-pokupok {
   width: 53px;
   background-image: url("assets/karta-pokupok.png");
@@ -1071,7 +1077,7 @@ html {
     font-size: 14px;
   }
   .header__phone__text {
-    font-size: 20px;
+    font-size: 16px;
   }
   .welcome__wrapper {
     gap: 0;
@@ -1315,8 +1321,8 @@ html {
     width: 500px;
   }
   .payment {
-    width: 334px;
-    margin-left: calc(50% - 167px);
+    width: 344px;
+    margin-left: calc(50% - 172px);
     gap: 30px;
   }
 }
