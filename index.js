@@ -58,8 +58,7 @@ gatesBlock.addEventListener('click', (e) => {
             if (item.classList.contains('gates__variants__sec-gates')) closeGates(secGatesBtn, secGatesInfo);
             if (item.classList.contains('gates__variants__swing-gates')) closeGates(swingGatesBtn, swingGatesInfo);
             if (item.classList.contains('gates__variants__sliding-gates')) closeGates(slidingGatesBtn, slidingGatesInfo);
-            if (item.classList.contains('gates__variants__roll')) closeGates(rollBtn, rollInfo);
-            setDefaultImg();
+            if (item.classList.contains('gates__variants__roll')) closeGates(rollBtn, rollInfo);            
         } else {
             gates.forEach(gate => {               
             gate.classList.remove('gates__variants__item_active');            
@@ -67,24 +66,19 @@ gatesBlock.addEventListener('click', (e) => {
         closeGates(secGatesBtn, secGatesInfo);
         closeGates(swingGatesBtn, swingGatesInfo);
         closeGates(slidingGatesBtn, slidingGatesInfo);
-        closeGates(rollBtn, rollInfo);
-        setSectionImg();
+        closeGates(rollBtn, rollInfo);        
         item.classList.add('gates__variants__item_active');        
         if (item.classList.contains('gates__variants__sec-gates')) {
-            openGates(secGatesBtn, secGatesInfo);
-            setSectionImg()
+            openGates(secGatesBtn, secGatesInfo);            
         };
         if (item.classList.contains('gates__variants__swing-gates')) {
-            openGates(swingGatesBtn, swingGatesInfo);
-            setSwingImg();
+            openGates(swingGatesBtn, swingGatesInfo);            
         };
         if (item.classList.contains('gates__variants__sliding-gates')) {
-            openGates(slidingGatesBtn, slidingGatesInfo);
-            setSlidingImg();
+            openGates(slidingGatesBtn, slidingGatesInfo);            
         };
         if (item.classList.contains('gates__variants__roll')) {
-            openGates(rollBtn, rollInfo);
-            setRollImg();
+            openGates(rollBtn, rollInfo);            
         };   
     };
 });
@@ -143,43 +137,6 @@ function openGates(btn, info) {
 function closeGates(btn, info) {
     btn.classList.remove('gates__variants__item__btn_active');
     info.classList.remove('gates__variants__info_active');
-};
-
-//SET IMGs
-
-function setSectionImg() {
-    gatesImg.classList.add('gates__right__img_section');
-    gatesImg.classList.remove('gates__right__img_swing');
-    gatesImg.classList.remove('gates__right__img_sliding');
-    gatesImg.classList.remove('gates__right__img_roll');
-};
-
-function setSwingImg() {
-    gatesImg.classList.add('gates__right__img_swing');
-    gatesImg.classList.remove('gates__right__img_section');
-    gatesImg.classList.remove('gates__right__img_sliding');
-    gatesImg.classList.remove('gates__right__img_roll');
-};
-
-function setSlidingImg() {
-    gatesImg.classList.add('gates__right__img_sliding');
-    gatesImg.classList.remove('gates__right__img_section');
-    gatesImg.classList.remove('gates__right__img_swing');
-    gatesImg.classList.remove('gates__right__img_roll');
-};
-
-function setRollImg() {
-    gatesImg.classList.add('gates__right__img_roll');
-    gatesImg.classList.remove('gates__right__img_section');
-    gatesImg.classList.remove('gates__right__img_swing');
-    gatesImg.classList.remove('gates__right__img_sliding');
-};
-
-function setDefaultImg() {
-    gatesImg.classList.remove('gates__right__img_roll');
-    gatesImg.classList.remove('gates__right__img_section');
-    gatesImg.classList.remove('gates__right__img_swing');
-    gatesImg.classList.remove('gates__right__img_sliding');
 };
 
 function scrollUp() {

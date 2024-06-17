@@ -220,9 +220,30 @@ html {
   padding: 0 0 50px 0;
 }
 
-.gates__wrapper {
-  display: flex;
-  justify-content: space-between;
+.gates__variants__item__info__img {
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+}
+
+.gates__variants__item__info__img__sec {
+  background-image: url("assets/section.jpg");
+}
+
+.gates__variants__item__info__img__swing {
+  background-image: url("assets/swing.jpg");
+}
+
+.gates__variants__item__info__img__sliding {
+  background-image: url("assets/sliding.jpg");
+}
+
+.gates__variants__item__info__img__roll {
+  background-image: url("assets/roll.jpg");
 }
 
 .gates__title,
@@ -237,45 +258,10 @@ html {
   color: #000000;
 }
 
-.gates__right {
-  margin-bottom: 17px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.gates__right__img {
-  width: 400px;
-  height: 400px;
-  border-radius: 20px;
-  background-image: url("assets/default.jpeg");
-  background-position: center;
-  background-size: cover;
-}
-
-.gates__right__img_section {
-  background-image: url("assets/section.jpg");
-  background-position: center;
-}
-
-.gates__right__img_swing {
-  background-image: url("assets/swing.jpg");
-  background-position: center;
-}
-
-.gates__right__img_sliding {
-  background-image: url("assets/sliding.jpg");
-  background-position: center;
-}
-
-.gates__right__img_roll {
-  background-image: url("assets/roll.jpg");
-  background-position: center;
-}
-
 .gates__variants {
-  width: 680px;
+  width: 1000px;
   padding: 34px 0;
+  margin: 0 auto;
   border: 1px solid #e3e1d5;
   border-radius: 20px;
   display: flex;
@@ -286,7 +272,7 @@ html {
 }
 
 .gates__variants__item {
-  width: 650px;
+  width: 940px;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -336,33 +322,40 @@ html {
 
 .gates__variants__info {
   display: none;
-  width: 650px;
   background: #edf2ec;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
 .gates__variants__info_active {
-  display: block;
+  display: flex;
+  justify-content: space-between;
 }
 
 .gates__variants__item__info__line {
   margin: 0 20px;
-  width: 610px;
+  width: 570px;
   height: 0px;
   border: 0.5px solid #aea1a1;
 }
 
-.gates__variants__item__info__text {
-  margin: 20px 20px 0;
-  padding-bottom: 20px;
+.gates__variants__item__info__wrapper {
   width: 610px;
+}
+
+.gates__variants__item__info__text {
+  margin: 20px 20px 0 0;
+  padding-bottom: 20px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 18px;
   color: #717171;
+}
+
+.gates__variants__item__info__text li {
+  margin: 10px 0;
 }
 
 #gallery {
@@ -802,23 +795,7 @@ html {
     background-image: url(assets/welcome_img4.png);
     background-size: 350px 436px;
   }
-  .gates__variants {
-    width: 600px;
-  }
-  .gates__variants__item {
-    width: 560px;
-  }
-  .gates__variants__info {
-    width: 560px;
-  }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
-    width: 520px;
-  }
-  .gates__right__img {
-    width: 350px;
-    height: 350px;
-  }
+
   .gallery__items {
     width: 2460px;
   }
@@ -850,17 +827,16 @@ html {
     gap: 0;
   }
   .gates__variants {
-    width: 560px;
+    width: 900px;
   }
   .gates__variants__item {
-    width: 520px;
+    width: 860px;
   }
-  .gates__variants__info {
-    width: 520px;
+  .gates__variants__item__info__wrapper {
+    width: 590px;
   }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
-    width: 480px;
+  .gates__variants__item__info__line {
+    width: 550px;
   }
   .repair__info {
     width: 550px;
@@ -921,6 +897,18 @@ html {
   .container {
     width: 830px;
   }
+  .gates__variants {
+    width: 800px;
+  }
+  .gates__variants__item {
+    width: 740px;
+  }
+  .gates__variants__item__info__wrapper {
+    width: 470px;
+  }
+  .gates__variants__item__info__line {
+    width: 430px;
+  }
   .gallery__items {
     width: 2280px;
   }
@@ -946,17 +934,6 @@ html {
     width: 270px;
     height: 337px;
     background-size: 270px 337px;
-  }
-  .gates__variants {
-    width: 510px;
-  }
-  .gates__variants__item,
-  .gates__variants__info {
-    width: 480px;
-  }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
-    width: 440px;
   }
   .repair__info {
     width: 510px;
@@ -996,23 +973,24 @@ html {
   .gates__title {
     font-size: 35px;
   }
-  .gates__wrapper {
-    flex-direction: row-reverse;
-  }
   .gates__variants {
-    width: 440px;
+    width: 660px;
   }
-  .gates__variants__item,
-  .gates__variants__info {
-    width: 400px;
+  .gates__variants__item {
+    width: 620px;
   }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
-    width: 360px;
-  }
-  .gates__right__img {
+  .gates__variants__item__info__img {
     width: 200px;
     height: 200px;
+  }
+  .gates__variants__item__info__wrapper {
+    width: 380px;
+  }
+  .gates__variants__item__info__text {
+    font-size: 16px;
+  }
+  .gates__variants__item__info__line {
+    width: 340px;
   }
   .gallery__title {
     font-size: 35px;
@@ -1088,14 +1066,15 @@ html {
     background-size: 240px 299px;
   }
   .gates__variants {
-    width: 380px;
+    width: 600px;
   }
-  .gates__variants__item,
-  .gates__variants__info {
+  .gates__variants__item {
+    width: 560px;
+  }
+  .gates__variants__item__info__wrapper {
     width: 340px;
   }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
+  .gates__variants__item__info__line {
     width: 300px;
   }
   .gallery__items {
@@ -1196,16 +1175,25 @@ html {
     padding-top: 55px;
     margin-top: -55px;
   }
+  .gates__variants__info_active {
+    flex-direction: column;
+  }
   .gates__variants {
-    width: 320px;
+    width: 540px;
   }
-  .gates__variants__item,
-  .gates__variants__info {
-    width: 300px;
+  .gates__variants__item {
+    width: 500px;
   }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
-    width: 260px;
+  .gates__variants__item__info__img {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+  .gates__variants__item__info__wrapper {
+    width: 500px;
+  }
+  .gates__variants__item__info__line {
+    display: none;
   }
   #gallery {
     padding-top: 55px;
@@ -1282,17 +1270,11 @@ html {
     width: 385px;
   }
   .gates__variants {
-    padding: 0;
-    width: 300px;
-    border: none;
+    width: 510px;
   }
   .gates__variants__item,
-  .gates__variants__info {
-    width: 300px;
-  }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
-    width: 260px;
+  .gates__variants__item__info__wrapper {
+    width: 470px;
   }
   .gallery__items {
     width: 1326px;
@@ -1359,22 +1341,15 @@ html {
     text-align: center;
     width: unset;
   }
-  .gates__right {
-    align-items: center;
-  }
-  .gates__gates {
-    margin-top: -20px;
-  }
   .gates__variants {
-    width: 430px;
-    padding-top: 40px;
+    width: 450px;
+  }
+  .gates__variants__item__info__img {
+    width: 250px;
+    height: 250px;
   }
   .gates__variants__item,
-  .gates__variants__info {
-    width: 430px;
-  }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
+  .gates__variants__item__info__wrapper {
     width: 390px;
   }
   .gallery__items {
@@ -1435,12 +1410,8 @@ html {
     width: 400px;
   }
   .gates__variants__item,
-  .gates__variants__info {
-    width: 410px;
-  }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
-    width: 370px;
+  .gates__variants__item__info__wrapper {
+    width: 360px;
   }
   .gallery__items__visible {
     width: 330px;
@@ -1486,15 +1457,11 @@ html {
   }
   .gates__variants {
     width: 350px;
-    gap: 15px;
+    padding: 20px 0;
   }
   .gates__variants__item,
-  .gates__variants__info {
+  .gates__variants__item__info__wrapper {
     width: 310px;
-  }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
-    width: 270px;
   }
   .gallery__items__visible {
     width: 280px;
@@ -1557,14 +1524,11 @@ html {
   }
   .gates__variants {
     width: 340px;
+    padding: 10px 0;
   }
   .gates__variants__item,
   .gates__variants__info {
-    width: 300px;
-  }
-  .gates__variants__item__info__line,
-  .gates__variants__item__info__text {
-    width: 260px;
+    width: 320px;
   }
   .gallery__items__visible {
     width: 275px;
