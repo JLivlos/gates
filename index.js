@@ -206,6 +206,13 @@ async function setOrderTemplates(i) {
     const data = await res.json();    
 
     orderText.value = data[i].text;
+    orderText.style.height = data[i].height;
+    if (data[i].type == 'Консультация') {
+        document.querySelector('.order_img').style.display = 'none';
+     } else {
+        document.querySelector('.order_img').style.display = 'block';
+        document.querySelector('.order_img').src = `${data[i].img}`; 
+    };    
     selectedOption.message = data[i].text;
     selectedOption.type = data[i].type;
 }
