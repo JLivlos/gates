@@ -566,7 +566,34 @@ html {
 
 .order_img {
   width: 600px;
+  height: 382px;
   border-radius: 5px;
+  background-size: 600px 382px;
+  display: none;
+}
+
+.order_img_active {
+  display: block;
+}
+
+.order_section-img {
+  background-image: url("assets/section_scheme.jpg");
+}
+
+.order_sliding-img {
+  background-image: url("assets/sliding_scheme.jpg");
+}
+
+.order_sw-garage-img {
+  background-image: url("assets/sw-garage_scheme.jpg");
+}
+
+.order_sw-street-img {
+  background-image: url("assets/sw-street_scheme.jpg");
+}
+
+.order_roll-img {
+  background-image: url("assets/roll_scheme.jpg");
 }
 
 .recaptcha {
@@ -1334,6 +1361,11 @@ html {
   .repair__title {
     width: 540px;
   }
+  .order_img {
+    width: 540px;
+    height: 344px;
+    background-size: 540px 344px;
+  }
   .payment {
     width: 540px;
     margin-left: calc(50% - 270px);
@@ -1413,6 +1445,11 @@ html {
   .repair__text {
     width: 500px;
   }
+  .order_img {
+    width: 510px;
+    height: 325px;
+    background-size: 510px 325px;
+  }
   .payment {
     width: 344px;
     margin-left: calc(50% - 172px);
@@ -1487,6 +1524,11 @@ html {
   .repair__text {
     width: 450px;
   }
+  .order_img {
+    width: 450px;
+    height: 287px;
+    background-size: 450px 287px;
+  }
   .order-btn {
     margin-left: 100px;
   }
@@ -1541,6 +1583,11 @@ html {
   }
   .repair__title {
     font-size: 36px;
+  }
+  .order_img {
+    width: 400px;
+    height: 255px;
+    background-size: 400px 255px;
   }
   .order-btn {
     margin-left: 75px;
@@ -1600,6 +1647,11 @@ html {
   }
   .repair__text {
     font-size: 18px;
+  }
+  .order_img {
+    width: 350px;
+    height: 223px;
+    background-size: 350px 223px;
   }
   .order-btn {
     margin-left: 50px;

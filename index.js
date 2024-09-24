@@ -195,6 +195,12 @@ next.addEventListener('click', () => {
 const select = document.querySelector('.order__form-options');
 const orderText = document.querySelector('.order__form-message');
 let selectedOption = {'message': '0', 'type': 'Секционные ворота'}
+const orderImgs = Array.from(document.querySelectorAll('.order_img'));
+const sectionImg = document.querySelector('.order_section-img');
+const sligindImg = document.querySelector('.order_sliding-img');
+const swGarageImg = document.querySelector('.order_sw-garage-img');
+const swStreetImg = document.querySelector('.order_sw-street-img');
+const rollImg = document.querySelector('.order_roll-img');
 
 select.onchange = function getSelectedValue(e) {
     setOrderTemplates(e.target.value);
@@ -206,15 +212,17 @@ async function setOrderTemplates(i) {
     const data = await res.json();    
 
     orderText.value = data[i].text;
-    orderText.style.height = data[i].height;
-    if (data[i].type == 'Консультация') {
-        document.querySelector('.order_img').style.display = 'none';
-     } else {
-        document.querySelector('.order_img').style.display = 'block';
-        document.querySelector('.order_img').src = `${data[i].img}`; 
-    };    
+    orderText.style.height = data[i].height;       
     selectedOption.message = data[i].text;
     selectedOption.type = data[i].type;
+
+    orderImgs.forEach((elem, index) => {
+        if (index == i) {
+            elem.classList.add('order_img_active');  
+        } else {
+            elem.classList.remove('order_img_active');
+        }
+    });      
 }
 setOrderTemplates(0);
 
@@ -271,10 +279,6 @@ phoneInput.oninput = (e) => {
     const hasInvalidCharacters = phoneInput.value.match(/[^0-9+ ()-]/);
   
     if (!hasInvalidCharacters) return;
-    
-    // Replace all non-digits:
     phoneInput.value = phoneInput.value.replace(/[^0-9+ ()-]/g, '');
-    
-    // Keep cursor position:
     phoneInput.setSelectionRange(cursorPosition, cursorPosition);
   };
